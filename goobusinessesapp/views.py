@@ -6,24 +6,6 @@ from django.contrib.auth.models import User
 from django.views.decorators.csrf import csrf_exempt
 from goobusinessesapp.models import AllServices
 from django.http import JsonResponse
-import random
-import re
-from email.message import EmailMessage
-import ssl
-import smtplib
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
-from datetime import datetime
-from datetime import timedelta
-# import datetime as dtpari
-import threading
-import markdown
-import json
-import os
-import razorpay # pip install razorpay
-from spire.pdf.common import *
-from spire.pdf import *
-from PyPDF2 import PdfWriter, PdfReader
 import time
 
 OurMainURL = "https://goobusines.com/"
