@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'lmsheader.html' %}
 
 {% block title %}Referral Page of Goo Business{% endblock title %}
 {% load static %}
@@ -30,7 +30,7 @@
                     </span>
                 </h1>
 
-                <h3>Get <span class="rupee">₹50</span> each time you do</h3>
+                <h3>Get <span class="rupee">₹100</span> each time you do</h3>
 
                 <p class="title-para">
                     It's easier than ever to invite friends to Goo Business. 
@@ -55,30 +55,30 @@
             <div class="how-it-works-div">
                 <div class="image-container-div">
                     <div class="image-div">
-                        <img src="{% static 'img/referral/invite.png' %}" alt="Invite Friends" class="how-it-works-img">
+                        <img src="{% static 'img/referral/refer.png' %}" alt="Invite Friends" class="how-it-works-img">
                         <p>Share with your Friends</p>
                     </div>
                 </div>
 
-                <div class="dotted-lines">
+                <!-- <div class="dotted-lines">
                     <img src="{% static 'img/referral/dotted way.png' %}" alt="Dotted Line" class="how-it-works-img">
-                </div>
+                </div> -->
         
                 <div class="image-container-div">
                     <div class="image-div">
-                        <img src="{% static 'img/referral/rupee.png' %}" alt="Invite Friends" class="how-it-works-img2">
+                        <img src="{% static 'img/referral/discount.png' %}" alt="Invite Friends" class="how-it-works-img">
                         <p>Give them to ₹50 Discount</p>   
                     </div>
                 </div>
 
-                <div class="dotted-lines">
+                <!-- <div class="dotted-lines">
                     <img src="{% static 'img/referral/dotted way1.png' %}" alt="Dotted Line" class="how-it-works-img">
-                </div>
+                </div> -->
         
                 <div class="image-container-div">
                     <div class="image-div">
-                        <img src="{% static 'img/referral/dollar.png' %}" alt="Invite Friends" class="how-it-works-img1">
-                        <p>Get ₹50 for every <br>
+                        <img src="{% static 'img/referral/money.png' %}" alt="Invite Friends" class="how-it-works-img">
+                        <p>Get ₹100 for every <br>
                             registration</p>
                     </div>
                 </div>
@@ -127,6 +127,230 @@
         </div>
     </section>
 
+    
+
+    <!-- Course Features -->
+
+    <section class="course-features">
+        <div class="course-features-div">
+            <h1>Our Course Features</h1>
+
+            <div class="course-features-items">
+                <div class="course-feature-item">
+                    <div class="course-feature-icon">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+    
+                    <div class="course-feature-desc">
+                        <p>Course Certification</p>
+                    </div>
+                </div>
+
+                <div class="course-feature-item">
+                    <div class="course-feature-icon">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+    
+                    <div class="course-feature-desc">
+                        <p>Career Counseling</p>
+                    </div>
+                </div>
+
+                <div class="course-feature-item">
+                    <div class="course-feature-icon">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+    
+                    <div class="course-feature-desc">
+                        <p>Real-World Case Studies</p>
+                    </div>
+                </div>
+
+                <div class="course-feature-item">
+                    <div class="course-feature-icon">
+                        <i class="fa-solid fa-people-robbery"></i>
+                    </div>
+    
+                    <div class="course-feature-desc">
+                        <p>Soft Skills Training</p>
+                    </div>
+                </div>
+
+                <div class="course-feature-item">
+                    <div class="course-feature-icon">
+                        <i class="fa-solid fa-road"></i>
+                    </div>
+    
+                    <div class="course-feature-desc">
+                        <p>Job Placement Assistance</p>
+                    </div>
+                </div>
+
+                <div class="course-feature-item">
+                    <div class="course-feature-icon">
+                        <i class="fa-solid fa-industry"></i>
+                    </div>
+    
+                    <div class="course-feature-desc">
+                        <p>Industry Insights Shared</p>
+                    </div>
+                </div>
+
+                <div class="course-feature-item">
+                    <div class="course-feature-icon">
+                        <i class="fa-regular fa-circle-user"></i>
+                    </div>
+    
+                    <div class="course-feature-desc">
+                        <p>Mock Interviews</p>
+                    </div>
+                </div>
+
+                <div class="course-feature-item">
+                    <div class="course-feature-icon">
+                        <i class="fa-solid fa-person-rays"></i>
+                    </div>
+    
+                    <div class="course-feature-desc">
+                        <p>Interview Preparation</p>
+                    </div>
+                </div>
+
+                <div class="course-feature-item">
+                    <div class="course-feature-icon">
+                        <i class="fa-solid fa-users-viewfinder"></i>
+                    </div>
+    
+                    <div class="course-feature-desc">
+                        <p>Community Support and Collaboration</p>
+                    </div>
+                </div>
+
+                <div class="course-feature-item">
+                    <div class="course-feature-icon">
+                        <i class="fa-solid fa-toolbox"></i>
+                    </div>
+    
+                    <div class="course-feature-desc">
+                        <p>Access to Tools and Software</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Covered -->
+    
+    <section class="tools-covered-section">
+        <div class="tools-covered">
+            <h1>  Tools & Technologies </h1>
+    
+            <div class="tools-list">
+
+                <div class="specific-tool">
+                    <div class="specific-tool-img">
+                        <img src="{% static 'img/referral/html.png' %}" alt="HTML">
+                    </div>
+    
+                    <div class="specific-tool-img-desc">
+                        <p>HTML</p>
+                    </div>
+                </div>
+
+                <div class="specific-tool">
+                    <div class="specific-tool-img">
+                        <img src="{% static 'img/referral/css.png' %}" alt="HTML">
+                    </div>
+    
+                    <div class="specific-tool-img-desc">
+                        <p>CSS</p>
+                    </div>
+                </div>
+
+                <div class="specific-tool">
+                    <div class="specific-tool-img">
+                        <img src="{% static 'img/referral/js.png' %}" alt="HTML">
+                    </div>
+    
+                    <div class="specific-tool-img-desc">
+                        <p>JavaScript</p>
+                    </div>
+                </div>
+
+                <div class="specific-tool">
+                    <div class="specific-tool-img">
+                        <img src="{% static 'img/referral/react.png' %}" alt="HTML">
+                    </div>
+    
+                    <div class="specific-tool-img-desc">
+                        <p>React</p>
+                    </div>
+                </div>
+
+                <div class="specific-tool">
+                    <div class="specific-tool-img">
+                        <img src="{% static 'img/referral/node.png' %}" alt="HTML">
+                    </div>
+    
+                    <div class="specific-tool-img-desc">
+                        <p>Node.js</p>
+                    </div>
+                </div>
+
+                <div class="specific-tool">
+                    <div class="specific-tool-img">
+                        <img src="{% static 'img/referral/mongo.png' %}" alt="HTML">
+                    </div>
+    
+                    <div class="specific-tool-img-desc">
+                        <p>MongoDB</p>
+                    </div>
+                </div>
+
+                <div class="specific-tool">
+                    <div class="specific-tool-img">
+                        <img src="{% static 'img/referral/git.png' %}" alt="HTML">
+                    </div>
+    
+                    <div class="specific-tool-img-desc">
+                        <p>Git</p>
+                    </div>
+                </div>
+
+                <div class="specific-tool">
+                    <div class="specific-tool-img">
+                        <img src="{% static 'img/referral/github.png' %}" alt="HTML">
+                    </div>
+    
+                    <div class="specific-tool-img-desc">
+                        <p>GitHub</p>
+                    </div>
+                </div>
+
+                <!-- <div class="specific-tool">
+                    <div class="specific-tool-img">
+                        <img src="{% static 'img/referral/html.png' %}" alt="HTML">
+                    </div>
+    
+                    <div class="specific-tool-img-desc">
+                        <p>Express</p>
+                    </div>
+                </div>
+
+                <div class="specific-tool">
+                    <div class="specific-tool-img">
+                        <img src="{% static 'img/referral/html.png' %}" alt="HTML">
+                    </div>
+    
+                    <div class="specific-tool-img-desc">
+                        <p>HTML</p>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+    
+
     <!-- Review Section -->
 
     <section class="reviews-section">
@@ -140,7 +364,7 @@
 
         <div class="review-carousel">
           <div class="review">
-            <h3 class="reviewer-name">Amit Patel</h3>
+            <h3 class="reviewer-name">Srinivas Dharpally</h3>
             <p class="review-content">The static website service exceeded my expectations! The design was sleek and professional.</p>
             <div class="star-rating">
               <i class="fa-solid fa-star"></i>
@@ -151,7 +375,7 @@
             </div>
           </div>
           <div class="review">
-            <h3 class="reviewer-name">Neha Kapoor</h3>
+            <h3 class="reviewer-name">Paritosh</h3>
             <p class="review-content">The static website beautifully showcased my business. It's a great investment for online presence.</p>
             <div class="star-rating">
               <i class="fa-solid fa-star"></i>
@@ -160,7 +384,7 @@
             </div>
           </div>
           <div class="review">
-            <h3 class="reviewer-name">Raj Singh</h3>
+            <h3 class="reviewer-name">Pranjal Pagar</h3>
             <p class="review-content">I highly recommend the static website services. It's user-friendly and visually appealing.</p>
             <div class="star-rating">
               <i class="fa-solid fa-star"></i>
@@ -170,14 +394,14 @@
             </div>
           </div>
           <div class="review">
-            <h3 class="reviewer-name">Deepika Mehta</h3>
+            <h3 class="reviewer-name">Moumitha Roy</h3>
             <p class="review-content">The static website elevated my brand's online presence. Great service and attention to detail!</p>
             <div class="star-rating">
               <i class="fa-solid fa-star"></i>
             </div>
           </div>
           <div class="review">
-            <h3 class="reviewer-name">Rahul Sharma</h3>
+            <h3 class="reviewer-name">Rahul Sirrola</h3>
             <p class="review-content">Impressed with the quality of service. The static website added a professional touch to my business.</p>
             <div class="star-rating">
               <i class="fa-solid fa-star"></i>
@@ -187,7 +411,7 @@
             </div>
           </div>
           <div class="review">
-            <h3 class="reviewer-name">Priya Gupta</h3>
+            <h3 class="reviewer-name">Khushbu Kumari</h3>
             <p class="review-content">Fantastic work on the static website! It perfectly reflects my brand's identity and values.</p>
             <div class="star-rating">
               <i class="fa-solid fa-star"></i>
@@ -196,7 +420,7 @@
             </div>
           </div>
           <div class="review">
-            <h3 class="reviewer-name">Karan Patel</h3>
+            <h3 class="reviewer-name">Parushuram Erra</h3>
             <p class="review-content">The static website design is exceptional. It has significantly boosted my online presence.</p>
             <div class="star-rating">
               <i class="fa-solid fa-star"></i>
@@ -205,7 +429,7 @@
               <i class="fa-solid fa-star"></i>
             </div>
           </div>
-          <!-- Repeat the above review structure three more times -->
+          
         </div>
 
         <div class="carousel-navigation">
@@ -312,7 +536,6 @@
         </div>
     </section>
 
-    <!-- Call to action -->
 
 
     

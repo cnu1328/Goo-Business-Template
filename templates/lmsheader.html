@@ -1,0 +1,265 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %}</title>
+    <link rel="shortcut icon" href="{% static 'img/Goo Businesses.png' %}" type="image/png">
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <link rel="stylesheet" href="{% static 'css/lmsheader/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/lmsheader/responsive.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" /> <!-- For icons -->
+    
+
+    {% block head %}
+
+    {% endblock head%}
+
+</head>
+
+<body>
+    <div class="pogress" id="pogressID"></div>
+
+    <header>
+
+        <div class="logo">
+            <img src="{% static 'img/Goo Businesses.png' %}" height="73px">
+        </div>
+
+        <nav>
+
+            <div>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/whyus">Why us?</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <form class="form" action="/searching" method="post">
+                    {% csrf_token %}
+                    <div class="search">
+                        <input class="form-ele1"  type="text" id="searchbarID" name="seachbar" placeholder="Search here..." width="20vw">
+                    </div>
+                    <div class="btn">
+                        <button class="bttn" type="submit">Search</button>
+                    </div>
+                </form>
+            </div>
+            
+
+            
+
+        <!-- <a href="/searching"><div class="navallproduct">Services</div></a>
+        <a href="/termsandconditions"><div class="navallproduct">Terms & Conditions</div></a>
+        <a href="/CancellationRefundPolicy"><div class="navallproduct">Cancellation/Refund Policy</div></a>
+        <a href="/courses"><div class="navallproduct">Courses</div></a>
+        <a href="/privacypolicy"><div class="navallproduct">Privacy Policy</div></a> -->
+
+        </nav>
+
+        <a href="/freetrail" class="freeTrl bblink">Get Your<br>Free Trial<br>up to $30</a>
+    </header>
+
+
+
+
+
+{% block body %}
+
+{% endblock body %}
+
+
+
+    <!-- Footer -->
+    <footer class="footer" style="background-image: url('../static/img/referral/footer-bg.png')">
+
+        <div class="footer-top section">
+          <div class="container grid-list">
+    
+            <!-- Company Contacts -->
+            <div class="footer-brand">
+    
+              <a href="#" class="logo">
+                <img src="{% static 'img/referral/Goo Businesses (1).png' %}" width="100"  alt="Goo Business logo">
+              </a>
+    
+              <p class="footer-brand-text">
+                Join us on the journey to success, where your vision becomes our mission. Let's shape the future of your business together.
+              </p>
+    
+              <div class="wrapper">
+                <span class="span">Add:</span>
+    
+                <address class="address">Mathabhanga, Cooch Behar, West Bengal 736146, IN</address>
+              </div>
+    
+              <div class="wrapper">
+                <span class="span">Call:</span>
+    
+                <a href="tel:+91xxxxxxxx" class="footer-link">+91xxxxxxxx</a>
+              </div>
+    
+              <div class="wrapper">
+                <span class="span">Email:</span>
+    
+                <a href="contact@goo-business.com" class="footer-link">contact@goo-business.com</a>
+              </div>
+    
+            </div>
+    
+            <!-- Company Links -->
+            <ul class="footer-list">
+    
+              <li>
+                <p class="footer-list-title">Online Platform</p>
+              </li>
+    
+              <li>
+                <a href="#" class="footer-link">About</a>
+              </li>
+    
+              <li>
+                <a href="#" class="footer-link">Courses</a>
+              </li>
+    
+              <li>
+                <a href="#" class="footer-link">Instructor</a>
+              </li>
+    
+              <li>
+                <a href="#" class="footer-link">Events</a>
+              </li>
+    
+              <li>
+                <a href="#" class="footer-link">Instructor Profile</a>
+              </li>
+    
+              <li>
+                <a href="#" class="footer-link">Purchase Guide</a>
+              </li>
+    
+            </ul>
+
+            <!-- More Urls of the company -->
+    
+            <ul class="footer-list">
+    
+              <li>
+                <p class="footer-list-title">Links</p>
+              </li>
+    
+              <li>
+                <a href="#" class="footer-link">Contact Us</a>
+              </li>
+    
+              <li>
+                <a href="#" class="footer-link">Gallery</a>
+              </li>
+    
+              <li>
+                <a href="#" class="footer-link">News & Articles</a>
+              </li>
+    
+              <li>
+                <a href="#" class="footer-link">FAQ's</a>
+              </li>
+    
+              <li>
+                <a href="#" class="footer-link">Sign In/Registration</a>
+              </li>
+    
+              <li>
+                <a href="#" class="footer-link">Coming Soon</a>
+              </li>
+    
+            </ul>
+    
+            <!-- Email Contact -->
+            <div class="footer-list">
+    
+              <p class="footer-list-title">Contacts</p>
+    
+              <p class="footer-list-text">
+                Enter your email address to register to our newsletter subscription
+              </p>
+    
+              <form action="" class="newsletter-form">
+                <input type="email" name="email_address" placeholder="Your email" required class="input-field">
+    
+                <button type="submit" class="btn has-before">
+                  <span class="span">Subscribe</span>
+    
+                  <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                </button>
+              </form>
+    
+              <ul class="social-list">
+    
+                <li>
+                  <a href="#" class="social-link">
+                    <i class="fa-brands fa-facebook"></i>
+                  </a>
+                </li>
+    
+                <li>
+                  <a href="#" class="social-link">
+                    <i class="fa-brands fa-linkedin"></i>
+                  </a>
+                </li>
+    
+                <li>
+                  <a href="#" class="social-link">
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                </li>
+    
+                <li>
+                  <a href="#" class="social-link">
+                    <i class="fa-brands fa-x-twitter"></i>
+                  </a>
+                </li>
+    
+                <li>
+                  <a href="#" class="social-link">
+                    <i class="fa-brands fa-youtube"></i>
+                  </a>
+                </li>
+    
+              </ul>
+    
+            </div>
+    
+          </div>
+        </div>
+    
+        <!-- Copy right Description -->
+        <div class="footer-bottom">
+          <div class="container">
+    
+            <p class="copyright">
+              Copyright © by Goo Business 2024 <a href="#" class="copyright-link">Goo business Team</a>
+            </p>
+    
+          </div>
+        </div>
+    
+    </footer>
+    
+    <div style="height: 10px;background-color: #2874f0;"></div>
+   
+
+
+
+    <script src="{% static 'JS/JS.js' %}"></script>
+
+</body>
+
+</html>
