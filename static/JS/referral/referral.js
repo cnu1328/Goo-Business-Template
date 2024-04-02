@@ -1,48 +1,86 @@
-const reviews = document.querySelectorAll('.review');
-const prevButton = document.querySelector('.prev-button');
-const nextButton = document.querySelector('.next-button');
+const joinButton = document.querySelector(".join-button");
+const closeButton = document.querySelector(".close-button");
+const closeButton1 = document.querySelector(".close-button1");
+const signUpModal = document.querySelector(".sign-up-modal");
+const loginLink = document.querySelector(".login-link");
+const loginModal = document.querySelector(".login-modal");
+const signUpLink = document.querySelector(".signup-link");
 
-let currentIndex = 0;
+const signUpForm = document.getElementById("signup-form");
+const passwordInput = document.getElementById("password");
+const confirmPasswordInput = document.getElementById("confirm-password");
+const passwordMismatchError = document.getElementById("password-mismatch-error");
 
-function showReview(index) {
-  reviews.forEach((review, i) => {
-    if (i === index) {
-      review.style.display = 'block';
-    } else {
-      review.style.display = 'none';
-    }
-  });
-}
+const enableModal = document.getElementById("modal-enable");
+const enable = enableModal.textContent;
 
-function showNextReview() {
-  currentIndex++;
-  if (currentIndex >= reviews.length) {
-    currentIndex = 0;
-  }
-  showReview(currentIndex);
-}
+// Join Button Click
+joinButton.addEventListener("click", () => {
 
-function showPreviousReview() {
-  currentIndex--;
-  if (currentIndex < 0) {
-    currentIndex = reviews.length - 1;
-  }
-  showReview(currentIndex);
-}
+    if(enable === "false")
+        signUpModal.style.display = "block"; 
+});
 
-prevButton.addEventListener('click', showPreviousReview);
-nextButton.addEventListener('click', showNextReview);
+// Closing The Modals
+closeButton.addEventListener("click", () => {
+    signUpModal.style.display = "none";
+});
 
-showReview(currentIndex);
+closeButton1.addEventListener("click", () => {
+    loginModal.style.display = "none";
+});
 
-function updateTotalPrice() {
-    var selectedService = document.getElementById("chooseService").value;
+// Click on login text
 
-    if(selectedService) {
-        var prices = { silver: 15, gold: 74, diamond: 149 };
-        document.getElementById("totalPrice").innerText = "$" + prices[selectedService];
-    } else {
-        document.getElementById("totalPrice").innerText = "";
-    }
+loginLink.addEventListener("click", () => {
+    signUpModal.style.display = "none";
+    loginModal.style.display = "block";
+});
+
+// Click on sign up text
+
+signUpLink.addEventListener("click", () => {
+    signUpModal.style.display = "block";
+    loginModal.style.display = "none";
+});
+
+// submit on signup
+
+signUpForm.addEventListener("submit", (event) => {
+    event.preventDefault();
     
-}
+    if (passwordInput.value !== confirmPasswordInput.value) {
+      passwordMismatchError.style.display = "block";
+      return; // Stop form submission if passwords don't match
+    }
+
+    const formData = new FormData(signUpForm);
+    const email = formData.get("email");
+    const password = formData.get("password");
+
+    // Storing username and password in local storage
+    localStorage.setItem("username", email);
+    localStorage.setItem("password", password);
+
+    // Clearing the form
+    signUpForm.reset();
+      
+    // Closing the signup modal
+    // const signUpModal = document.querySelector(".sign-up-modal");
+    // const modalOverlay = document.querySelector(".modal-overlay");
+    signUpModal.style.display = "none";
+    modalOverlay.style.display = "none";
+
+});
+
+// Reset error message on input change
+passwordInput.addEventListener("input", () => {
+    passwordMismatchError.style.display = "none";
+});
+
+confirmPasswordInput.addEventListener("input", () => {
+    passwordMismatchError.style.display = "none";
+});
+
+
+// Blur the background

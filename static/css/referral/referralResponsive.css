@@ -1,160 +1,122 @@
+
+/* Responsive */
+
 @media screen and (max-width: 980px) {
-   
-    /* How It Works */
-
-    .how-it-works-div-parent {
-        width: 100%;
-    }
-
-    .how-it-works-div {
-        flex-wrap: wrap;
-        gap: 20px;
-    }
-
-    .dotted-lines {
-        display: none;
-    }
-
-    /* FAQ Section */
-
-    .faq-block {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    /* Review Section */
-    .review {
-        width: 60%;
-    }
-}
-
-@media screen and (max-width: 780px) {
-
-    /* Title Section */
-    .title-section {
-        padding-top: 40px;
-    }
-
-    .title-div {
-        flex-direction: column-reverse;
-        gap: 20px;
-    }
-
-    /* How It Works */
-
-   
-    .how-it-works-div {
-        flex-wrap: wrap;
-        gap: 20px;
-    }
-
-    .how-it-works-div-parent {
-        width: 90%;
-    }
-
-    /* How it is different */
-
-    .learn-different-div {
-        width: 80%;
-    }
-
-    /* FAQ SECTionn */
-
-    .faq-sub-block {
-        width: 220px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-
-    /* Title Section */
-    .title-detail-div h1 {
+    
+    /* Intro SEction */
+    .refer-intro-content h1 {
         font-size: 30px;
     }
-    
-    .title-detail-div h3 {
-        font-size: 25px;
+
+    /* Signup Modal */
+
+    .sign-up-modal {
+      left: 15%;
+    }
+}
+
+
+@media screen and (max-width: 780px) {
+    /* Intro Section */
+    .refer-intro-div {
+        flex-direction: column;
     }
 
-    /* How it works */
-
-    .how-it-works-div {
-       flex-direction: column;
+    .refer-intro-div > * {
+        flex: 1;   
     }
-
-    .image-container-div {
-        display: flex;
-        justify-content: center;
-    }
-
-    .how-it-works-img {
-        width: 70%;
-    }
-
-    .how-it-works-img1 {
-        width: 70%;
+    .refer-intro-content h1 {
+        font-size: 35px;
     }
 
     /* Benefits Section */
 
-    .referral-benefits-div {
+    .benefits-content {
         flex-direction: column;
-    }
-
-    .referral-benefits-div-title h1 {
-        text-align: center;
-    }
-
-    .referral-benefits {
-        padding: 40px 0;
-    }
-
-    .referral-benefits-title i {
-        font-size: 20px;
-    }
-
-    .referral-benefits-title h3 {
-        font-size: 18px;
-    }
-
-    .referral-benefits-div-title h1 {
-        font-size: 25px;
-    }
-
-    /* How it is different */
-
-    .learn-different-div {
-        width: 100%;
-        padding: 10px;
-    }
-
-    .landscape-img {
-        display: none;
-    }
-
-    .mobile-view-img {
-        display: block;
-    }
-
-    /* FAQ Section */
-
-    .faq-block {
-        margin: auto;
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .faq-sub-block {
-        margin: auto;
-        width: 90%;
+        gap: 20px;
     }
 
     /* Review Section */
 
-    .review {
-        width: 90%;
+    .review-content {
+      grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
     }
 
-    /* Call to action */
-    .join-button-div h1 {
-        font-size: 18px;
+    /* Signup */
+
+    .sign-up-modal {
+      left: 20px;
+      width: 90%;
     }
+    
+}
+
+@media screen and (max-width: 480px) {
+    /* Intro Section */
+
+    .refer-intro-section {
+        width: 100%;
+        padding: 10px;
+        
+    }
+
+    .refer-intro-div {
+        gap: 20px;
+    }
+    
+    .refer-intro-content h1 {
+        font-size: 30px;
+    }
+
+    .refer-intro-content div {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Benefits Section */
+
+    .benefits-title {
+        height: 80px;
+    }
+
+    .benefits-title h1 {
+        font-size: 22px;
+        padding-bottom: 10px;
+    }
+
+    .benefit-div {
+        width: 80%;
+        margin: auto;
+    }
+
+    /* FAQ Section */
+
+    .faq-sub-block {
+      min-width: 150px;
+    }
+
+
+    /* Explore Courses */
+
+    .prev-button-div1 i,
+    .prev-button-div i {
+      font-size: 20px;
+    }
+
+    .course-card {
+      min-width: 200px;
+    }
+
+    
+}
+
+@media screen and (max-width: 490px) {
+  /* Review Section */
+
+  .review-content {
+    margin: auto;
+  }
 }
